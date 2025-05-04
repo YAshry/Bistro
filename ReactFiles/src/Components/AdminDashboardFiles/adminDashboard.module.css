@@ -1,0 +1,354 @@
+@import url("@fontsource/playfair-display");
+
+.loginAgainContainer{
+    gap:20px;
+    width:40%;
+    padding:30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+/* Section One */
+.profileBGImgContainer,
+.profileImgContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileImgContainer{
+    top: 93%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.profileBGImgContainerImage{
+    width:100%;
+    height:250px;
+    overflow: hidden;
+}
+
+.profileBGImgContainerImage img{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.profileImgButton{
+    transform: translateY(20px);
+}
+
+.profileBGImgButton,
+.profileImgButton{
+    padding:10px;
+    position: absolute;
+}
+
+.profileBGImgContainer button{
+    right:25px;
+    bottom:20px;
+}
+
+.profileBGImgContainer .button2{
+    top:20px;
+    left:25px;
+}
+
+.profileImgContainerImage{
+    width:200px;
+    height:200px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.profileImgContainerImage img{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Section Two */
+.textSection{
+    gap:5px;
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textSection .name{
+    color:#2C2F24;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Playfair Display;
+}
+
+.textSection .username{
+    color:#414536;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Section Three */
+.dashboardContainer{
+    display: flex;
+    padding:50px 0px;
+    align-items: start;
+    justify-content: center;
+}
+
+.dashboardTitleContainer{
+    gap:20px;
+    width:10%;
+    height:400px;
+    display: flex;
+    padding:30px 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: -4px 0px 10px 0px #ccc;
+}
+
+.dashboardTitle{
+    width:100%;
+    padding:10px;
+    color:#2C2F24;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+
+    background-size: 0% 100%; /* icon background size 0 for not shown before hover*/
+    background-position: 50% 100%; /* the position where it will start */ 
+    background-repeat: no-repeat; /* for no repeating the image or in this case the background */
+    transition: background-size .5s, color .5s; /* animation time */
+    background-image: linear-gradient(#AD343E,#AD343E); /* background color */
+}
+
+.dashboardTitle:hover{
+    cursor: pointer;
+    color:#ffffff;
+    background-size: 100% 100%;
+}
+
+.dashboardContentContainer{
+    width:60%;
+    height:400px;
+    padding:30px 30px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 4px 0px 10px 0px #ccc;
+}
+
+.generalSettingsContainer{
+    gap:20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.inputContainer{
+    gap:10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.halfInputContainer{
+    width:50%;
+}
+
+.threeInputContainer{
+    width:calc(100%/3);
+}
+
+/* Table */
+.settingsContainer{
+    gap:20px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableContainer{
+    gap:10px;
+    width:100%;
+    height:350px;
+    overflow: scroll;
+    display: inline-block;
+    flex-direction: column;
+}
+
+.tableContainer tr:hover{
+    cursor:auto;
+    transition:0.5s all;
+    background-color: #f5f5f5;
+}
+
+.tableRow th{
+    top:0;
+    font-size: 16px;
+    position: sticky;
+    width:calc(100%/9);
+    text-align: center;
+    white-space: nowrap;
+    padding:0px 5px 5px 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+.tableRow td{
+    font-size: 14px;
+    width:calc(100%/9);
+    padding:5px 10px 5px 10px;
+    border-right:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.tableAddButton{
+    gap:5px;
+    font-size: 14px;
+    margin-left: auto;
+    width:fit-content;
+    border-radius: 10px;
+}
+
+.modifictaions{
+    gap:5px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+}
+
+.tableEditButton{
+    padding:5px 10px;
+}   
+
+.tableImgContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tableImgContainerImage{
+    max-width:50px;
+}
+
+.tableImgContainerImage img{
+    width:100%;
+    display: flex;
+}
+
+.acceptButton{
+    background-color: green;
+    background-image: linear-gradient(white, white);
+}
+
+.acceptButton:hover{
+    color:green;
+    border-color: green;
+}
+
+.rejectButton{
+    color:white;
+    background-color: darkred;
+    background-image: linear-gradient(white, white);
+}
+
+.rejectButton:hover{
+    color:darkred;
+    border-color: darkred;
+}
+
+.acceptBadge{
+    color:white;
+    cursor:default;
+    background-color: green;
+    background-image: linear-gradient(white, white);
+}
+
+.rejectBadge{
+    color:white;
+    cursor:default;
+    background-color: darkred;
+    background-image: linear-gradient(white, white);
+}
+
+@media screen and (max-width: 1024px) {
+    .dashboardTitleContainer{
+        width:15%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboardContainer{
+        align-items: center;
+        flex-direction: column;
+    }
+    .dashboardTitleContainer{
+        width:82%;
+        overflow-x: auto;
+        height:fit-content;
+        white-space: nowrap;
+        flex-direction: row;
+        border-radius: 15px 15px 0px 0px;
+        box-shadow: 0px 0px 10px 0px #ccc;
+    }
+    .dashboardContentContainer{
+        width:80%;
+        height:auto;
+        border-radius: 0px 0px 15px 15px;
+        box-shadow: 0px 0px 10px 0px #ccc;
+    }
+    .inputContainer{
+        flex-wrap: wrap;
+    }
+    .threeInputContainer,
+    .halfInputContainer{
+        width:49%;
+    }
+    .dashboardTitle{
+        text-align: center;
+    }
+    .tableAddButton{
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .threeInputContainer,
+    .halfInputContainer{
+        width:100%;
+    }
+    .profileImgContainer{
+        top: 80%;
+    }
+    .profileImgContainerImage{
+        width:150px;
+        height:150px;
+    }
+    .textSection{
+        padding-top: 35px;
+    }
+    .dashboardContentContainer{
+        width:77%;
+    }
+}

@@ -1,0 +1,363 @@
+@import url("@fontsource/playfair-display");
+
+.loginAgainContainer{
+    gap:20px;
+    width:40%;
+    padding:30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+/* Section One */
+.profileBGImgContainer,
+.profileImgContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileImgContainer{
+    top: 93%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.profileBGImgContainerImage{
+    width:100%;
+    height:250px;
+    overflow: hidden;
+}
+
+.profileBGImgContainerImage img{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.profileImgButton{
+    transform: translateY(20px);
+}
+
+.profileBGImgContainer button{
+    right:25px;
+    bottom:20px;
+}
+
+.profileBGImgContainer .button2{
+    top:20px;
+    left:25px;
+}
+
+.profileImgContainerImage{
+    width:200px;
+    height:200px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.profileImgContainerImage img{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.profileBGImgButton,
+.profileImgButton{
+    padding:10px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileBGImgContainer .button3{
+    top:20px;
+    right:25px;
+}
+
+
+.button3{
+    gap:5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Section Two */
+.textSection{
+    gap:5px;
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textSection .name{
+    color:#2C2F24;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Playfair Display;
+}
+
+.textSection .username{
+    color:#414536;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Section Three */
+.sectionThreeContainer{
+    gap:50px;
+    display: flex;
+    padding:20px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupContainer{
+    width:100%;
+    display: flex;
+    padding:50px 0px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionContent{
+    gap:20px;
+    width:60%;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px #ccc;
+}
+
+.sectionInnerContent{
+    gap:10px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.halfInputContainer{
+    width:50%;
+}
+
+.sectionInnerContentInputsContainer{
+    width:calc(100%/3);
+}
+
+.saveButton{
+    width:fit-content;
+}
+
+.sectionThreeCatContainer{
+    display: flex;
+    color:#2C2F24;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Playfair Display;
+}
+
+.catname{
+    color:#2C2F24;
+    font-size: 15px;
+    padding:10px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.5s all;
+    border: 1px solid #DBDFD0;
+
+    background-size: 0% 100%; /* icon background size 0 for not shown before hover*/
+    background-position: 50% 100%; /* the position where it will start */ 
+    background-repeat: no-repeat; /* for no repeating the image or in this case the background */
+    transition: background-size .5s, color .5s; /* animation time */
+    background-image: linear-gradient(#AD343E,#AD343E); /* background color */
+}
+
+.catname:hover{
+    cursor: pointer;
+    color:#ffffff;
+    background-size: 100% 100%;
+}
+
+/* Section 4 */
+.sectionFourInnerContainer{
+    gap:15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding:50px 150px;
+    align-items: start;
+    justify-content: start;
+}
+
+.cardContainer{
+    gap:15px;
+    width:230px;
+    padding:20px;
+    height: 200px;
+    display: flex;
+    align-items: start;
+    border-radius: 10px;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.cardTitleContainer{
+    font-size: 16px;
+    color:#AD343E;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.cardCommentContainer{
+    overflow:auto;
+}
+
+.cardHRContainer{
+    width: 100%;
+    border: 1px solid #DBDFD0;
+}
+
+.bookingInfo{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modifictaions{
+    gap:5px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+}
+
+.badge{
+    padding:5px 10px;
+    color:white;
+    cursor:default;
+}
+.acceptBadge{
+    background-color: green;
+}
+
+.rejectBadge{
+    background-color: darkred;
+}
+
+.pendBadge{
+    background-color: rgb(209, 212, 18);
+}
+
+.bookingInfo span{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.bookingID{
+    color:#AD343E;
+}
+
+.tableEditButton{
+    padding:5px 10px;
+}
+
+.bookerInfo,
+.bookInfo{
+    width:100%;
+    display: flex;
+    font-size: 14px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bookerInfo{
+    gap:5px;
+}
+
+.bookInfo{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .sectionContent{
+        width:60%;
+    }
+    .cardContainer{
+        width:250px;
+    }
+    .sectionFourInnerContainer{
+        padding:50px 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sectionContent{
+        width:80%;
+    }
+    .sectionFourInnerContainer{
+        align-items: center;
+    }
+    .threeInputContainer{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .profileImgContainer{
+        top: 80%;
+    }
+    .profileImgContainerImage{
+        width:150px;
+        height:150px;
+    }
+    .textSection{
+        padding-top: 35px;
+    }
+    .sectionContent{
+        width:70%;
+    }
+    .sectionInnerContent{
+        gap:20px;
+        flex-direction: column;
+    }
+    .sectionInnerContentInputsContainer{
+        width:100%;
+    }
+    .halfInputContainer{
+        width:100%;
+    }
+    .sectionFourInnerContainer{
+        padding:50px 50px;
+    }
+    .sectionThreeContainer{
+        gap:10px;
+    }
+}

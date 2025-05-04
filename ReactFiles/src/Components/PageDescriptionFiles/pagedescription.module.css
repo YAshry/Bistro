@@ -1,0 +1,35 @@
+@import url("@fontsource/playfair-display");
+
+.sectionContainer{
+    display: flex;
+    color:#495460;
+    font-size: 15px;
+    padding:0px 35%;
+    text-align: center;
+    justify-content: center;
+
+    /* Animation */
+    animation: 2s fade;
+}
+
+@keyframes fade {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sectionContainer{
+        font-size: 12px;
+        padding:0px 20%;    
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sectionContainer{
+        padding:0px 15%;
+    }
+}

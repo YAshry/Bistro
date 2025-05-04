@@ -1,0 +1,458 @@
+@import url("@fontsource/playfair-display");
+
+/* Section One */
+.sectionOneContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionOneOverlayContentContainer{
+    gap:20px;
+    z-index: 9;
+    display: flex;
+    padding:0px 30%;
+    position: absolute;
+    flex-direction: column;
+}
+
+.sectionOneImageContainer{
+    /* Section One Image Animation */
+    display: flex;
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+
+.sectionOneImageContainer img{
+    width:100%;
+}
+
+@keyframes image-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.sectionOneButtonsContainer{
+    gap:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Two */
+.sectionTwoContainer{
+    gap:30px;
+    display: flex;
+    padding:50px 0px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.sectionTwoTitleContainer{
+    font-size: 40px;
+    color:#2C2F24;
+    font-weight: bold;
+    font-family: Playfair Display;
+}
+
+.sectionTwoCardsContainer{
+    gap:15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTwoCard{
+    gap:20px;
+    width:200px;
+    display: flex;
+    padding:30px 20px;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #DBDFD0;
+    
+    /* Animation with on Scroll */
+    animation: sectionTwoCardAnimation linear both; /*both means that the animation will work when sliding up and down, while forwards only one way*/
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 50%; /*start and end of animation position*/
+
+    /* Background */
+    background-size: 100% 0%; /* icon background size 0 for not shown before hover*/
+    background-position: 50% 100%; /* the position where it will start */ 
+    background-repeat: no-repeat; /* for no repeating the image or in this case the background */
+    transition: background-size .5s, color .5s; /* animation time */
+    background-image: linear-gradient(#f2f1f1ee, #f2f1f1ee);
+}
+
+@keyframes sectionTwoCardAnimation {
+    from{
+        opacity:0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+.sectionTwoCard:hover{
+    transition: 0.5s all;
+    transform: scale(1.05);
+    background-size: 100% 20%;
+}
+
+.sectionTwoIconContainer{
+    padding:20px;
+    display: flex;
+    font-size: 25px;
+    border-radius: 50px;
+    align-items: center;
+    transition: 0.5s all;
+    justify-content: center;
+    background-color: #e7e7e7;
+}
+
+.sectionTwoCard:hover .sectionTwoIconContainer{
+    color:white;
+    background-color: #AD343E;
+}
+
+.sectionTwoCardTitleContainer{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.sectionTwoCardDescriptionContainer{
+    color:#414536;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sectionTwoCardButtonContainer{
+    color:#AD343E;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s all;
+    text-decoration: none;
+}
+
+.sectionTwoCardButtonContainer:hover{
+    cursor: pointer;
+    color: #414536;
+}
+
+.sectionTwoCard:hover .sectionTwoCardButtonContainer{
+    transform: translateY(10px);
+}
+
+/* Section Three */
+.sectionThreeContainer{
+    gap:50px;
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    padding-bottom: 150px;
+    justify-content: center;
+}
+
+.sectionThreeRightContainer{
+    width:50%;
+    display: flex;
+    position:relative;
+    margin-bottom: auto;
+}
+
+.stRightImageContainer{
+    width:70%;
+    display: flex;
+    border-radius: 20px;
+
+    animation: sectionThreeImageAnim 0.5s linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 40%; /*start and end of animation position */
+}
+
+@keyframes sectionThreeImageAnim {
+    from{
+        opacity:0;
+        transform: translateX(-500px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }   
+}
+
+.stRightImageContainer img{
+    width:100%;
+    border-radius: 20px;
+}
+
+.stRightOverlayContentContainer{
+    gap:40px;
+    right:21%;
+    bottom:-10%;
+    padding:40px;
+    z-index: 999;
+    display: flex;
+    max-width:250px;
+    color:#ffffff;
+    position: absolute;
+    border-radius: 10px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+
+    animation: sectionThreeOverLayAnim 0.5s linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 30%; /*start and end of animation position */
+}
+
+@keyframes sectionThreeOverLayAnim {
+    from{
+        opacity:0;
+        transform: translateX(50px);
+        transform: translateY(100px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+        transform: translateY(0);
+    } 
+}
+
+.sectionThreeOverlayTitle{
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight:bold;
+}
+
+.sectionThreeOverlayContactInformationContainer{
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionThreeOverlayContactInformationSubContainer{
+    gap:20px;
+    display: flex;
+}
+
+.contactIconContainer{
+    font-size: 13px;
+    color:#F9F9F7;
+}
+
+.sectionThreeMail,
+.contactInformationContainer{
+    font-size: 13px;
+    color:#F9F9F7;
+    transition: 0.5s all;
+    text-decoration: none;
+}
+
+.sectionThreeMail:hover{
+    color:#AD343E;
+}
+
+.sectionThreeLeftContainer{
+    gap:20px;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stLeftTitleContainer{
+    font-size: 40px;
+    color:#2C2F24;
+    font-weight: medium;
+    font-family: Playfair Display;
+
+    animation: fadeIn 1s linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 30%; /*start and end of animation position */
+}
+
+.stLeftDescriptionOneContainer{
+    color:#2C2F24;
+    font-size: 13px;
+    font-weight:bold;
+
+    animation: fadeIn 1s linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 30%; /*start and end of animation position */
+}
+
+.stLeftDescriptionTwoContainer{
+    color:#414536;
+    font-size: 11px;
+    font-weight:regular;
+
+    animation: 0.5s fadeIn linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 30%; /*start and end of animation position */
+}
+
+.stLeftButtonContainer{
+    width:30%;
+    font-size: 13px;
+    font-weight: 600;
+    padding:10px 10px;
+    text-decoration: none;
+    background-color: #F9F9F7;
+
+    animation: fadeIn 0.5s linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 20%; /*start and end of animation position */
+}
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+        transform:rotate(50deg)
+    }
+    to{
+        opacity:1;
+        transform:rotate(0deg)
+    }
+}
+
+/* Section Four */
+
+
+@media screen and (max-width: 1024px) {
+    .sectionOneTitle{
+        font-size: 55px;
+    }
+    .sectionTwoCardsContainer{
+        gap:20px;
+    }
+    .sectionTwoTitleContainer{
+        font-size: 30px;
+    }
+    .stRightOverlayContentContainer{
+        padding:30px;
+        right:5%;
+        bottom:-24%;
+    }
+    .sectionThreeOverlayTitle{
+        font-size: 13px;
+    }
+    .sectionThreeMail,
+    .contactInformationContainer{
+        font-size: 11px;
+    }
+    .stLeftTitleContainer{
+        font-size: 35px;
+    }
+    .sectionThreeLeftContainer{
+        width:40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sectionOneTitle{
+        font-size: 40px;
+    }
+    .sectionOneButtonsContainer .button{
+        font-size: 12px;
+    }
+    .sectionTwoCardsContainer{
+        gap:30px;
+    }
+    .sectionThreeContainer{
+        gap:100px;
+        padding:60px;
+        flex-direction: column;
+    }
+    .stRightOverlayContentContainer{
+        left:25%;
+        bottom:-10%;
+        padding:40px;
+    }
+    .sectionThreeRightContainer{
+        width:100%;
+        justify-content: center;
+    }
+    .sectionThreeLeftContainer{
+        width:100%;
+        text-align: center;
+        align-items: center;
+    }
+    .stLeftTitleContainer,
+    .stLeftDescriptionOneContainer,
+    .stLeftDescriptionTwoContainer{
+        padding:0px 100px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sectionOneOverlayContentContainer{
+        gap:10px;
+        padding:0px 15%;
+    }
+    .sectionOneButtonsContainer{
+        flex-direction: column;
+    }
+    .sectionOneImageContainer{
+        height: 300px;
+    }
+    .sectionOneImageContainer img{
+        height: 100%;
+        transform: rotate(180deg);
+    }
+    .sectionTwoCardsContainer{
+        flex-direction: column;
+    }
+    .sectionThreeContainer{
+        padding:40px 20px;
+    }
+    .sectionThreeRightContainer{
+        align-items: center;
+        flex-direction: column;
+    }
+    .stRightOverlayContentContainer{
+        left:12%;
+        bottom:-30%;
+        padding:20px;
+    }
+    .stLeftTitleContainer,
+    .stLeftDescriptionOneContainer,
+    .stLeftDescriptionTwoContainer{
+        padding:0px 30px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .sectionOneTitle{
+        font-size: 30px;
+    }
+    .sectionOneOverlayContentContainer{
+        padding:0px 10%;
+    }
+    .stRightOverlayContentContainer{
+        left:7%;
+        bottom:-30%;
+    }
+    .stRightImageContainer{
+        width:90%;
+    }
+    .stLeftTitleContainer{
+        font-size: 30px;   
+    }
+    .stLeftDescriptionOneContainer{
+        font-size: 12px;
+    }
+}

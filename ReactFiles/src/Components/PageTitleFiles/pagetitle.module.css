@@ -1,0 +1,52 @@
+@import url("@fontsource/playfair-display");
+
+.sectionContainer{
+    color:#2C2F24;
+    font-size: 90px;
+    line-height:1em;
+    text-align: center;
+    padding:0px 0px 10px 0px;
+    font-family: Playfair Display;
+}
+
+.pageTitleAnimation{
+    /* Animation */
+    animation: 
+        inner-left 1s 1s ease both,
+        text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both
+    ;
+}
+
+@keyframes inner-left {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: none;
+    }
+}
+
+@keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .sectionContainer{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sectionContainer{
+        font-size: 50px;
+    }
+}

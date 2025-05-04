@@ -1,0 +1,256 @@
+.upperHeaderContainer{
+    display:flex;
+    padding:10px 150px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #474747;
+    justify-content: space-between;
+}
+
+.lowerHeaderContainer{
+    display:flex;
+    padding:30px 150px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F9F9F7;
+    justify-content: space-between;
+}
+
+.innerSectionContainer{
+    gap:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerDataWithIcons{
+    gap:5px;
+    display: flex;
+    color: #DBDFD0;
+    align-items: center;
+    justify-content: center;
+}
+.headerMailTo{
+    cursor: pointer;
+    color:#DBDFD0;
+    text-decoration: none;
+}
+
+.headerMailTo:hover{
+    color:white
+}
+
+.iconWithBorder{
+    padding:8px;
+    font-size: 14px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px black;
+}
+.iconWithBorder:hover{
+    cursor: pointer;
+    color:#AD343E;
+    box-shadow: 0px 0px 4px black;
+}
+
+.headerlogoContainer{
+    padding:10px 0px 10px 0px;
+}
+.headerlogoContainer img{
+    width:200px;
+}
+
+.navigationContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerNavItem{
+    display: flex;
+    color:#474747;
+    font-size: 18px;
+}
+
+.navMenuResponsiveButton{
+    display: none !important;
+}
+
+.responsiveNavigationMenuContainer{
+    top:0;
+    right:0;
+    gap:10px;
+    width:40%;
+    height: 100%;
+    display: flex;
+    z-index: 9999;
+    color:#ffffff;
+    position: fixed;
+    padding-left: 50px;
+    align-items: center;
+    animation: respNav 1s;
+    background-size:cover;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 15px #000000;
+    background-image: url("http://localhost:4000/navMenuRespBG.jpg");
+}
+
+.responsiveNavigationMenuInnerContainer{
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes respNav {
+    0%{
+        transform: translateX(180%);
+    }
+}
+
+.closeRespNavigationButton{
+    top:10px;
+    width: 20px;
+    height: 20px;
+    padding:10px;
+    display: flex;
+    color:#DBDFD0;
+    font-size: 18px;
+    position:absolute;
+    border-radius: 50%;
+    align-items: center;
+    transition: 0.3s all;
+    justify-content: center;
+    background-color: #AD343E;
+}
+
+.sideMenuProfileImageContainer{
+    width:150px;
+    height:150px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideMenuProfileImageContainer img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    margin-bottom: 40px;
+    box-shadow: 0px 10px 6px #000000;
+}
+
+.sideMenuProfileSettingsButton{
+    bottom: 20px;
+    padding:5px;
+    display: flex;
+    color:#DBDFD0;
+    position: absolute;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #AD343E;
+}
+
+.loggedInProfileDropdown{
+    width:42px;
+    height:42px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    align-items: center;
+    transition: 0.5s all;
+    justify-content: center;
+    border: 1px solid #474747;
+}
+.loggedInProfileDropdown img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    transition: 0.5s all;
+}
+
+.profileDropdownContainer{
+    top:45px;
+    z-index:9999;
+    display: flex;
+    color:#DBDFD0;
+    position: absolute;
+    border-radius: 10px;
+    align-items: center;
+    transition: 0.5s all;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+}
+
+.profileDropdownItem{
+    width:120px;
+    color:#DBDFD0;
+    padding:10px 0px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #DBDFD0;
+}
+.profileDropdownItem:hover{
+    color:#DBDFD0;
+    transition: 0.5s all;
+    background-color: #AD343E;
+}
+
+@media screen and (max-width: 1024px) {
+    .upperHeaderContainer{
+        padding:10px 50px;
+    }
+    .lowerHeaderContainer{
+        padding:30px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .upperHeaderContainer{
+        padding:10px 20px;
+    }
+    .lowerHeaderContainer{
+        padding:30px 20px;
+    }
+    .navigationContainer{
+        display: none;
+    }
+    .navMenuResponsiveButton{
+        display: flex !important;
+    }
+    .headerNavItem{
+        color:#DBDFD0;
+    }
+    .loggedInProfileDropdown{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .upperHeaderContainer{
+        gap:5px;
+        padding:10px 10px;
+        flex-direction: column;
+    }
+    .lowerHeaderContainer{
+        padding:10px 10px;
+    }
+    .responsiveNavigationMenuContainer{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .contactInfoXXSmallScreen{
+        gap:5px;
+        flex-direction: column;
+    }
+    .upperHeaderContainer{
+        gap:10px;
+    }
+}

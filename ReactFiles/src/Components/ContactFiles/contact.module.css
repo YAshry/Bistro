@@ -1,0 +1,113 @@
+.pageContainer{
+    position: relative;
+}
+
+.absoluteSection{
+    top:25%;
+    left:28%;
+    gap:20px;
+    width:40%;
+    padding:30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+.sectionAbsoluteInputContainer{
+    width:100%;
+}
+
+.sectionInnerContent{
+    gap:10px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionAbsoluteHalfInputContainer{
+    width:calc(100%/2);
+}
+
+.sectionOneContainer{
+    padding-bottom: 250px;
+}
+
+.sectionTwoContainer{
+    gap:100px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 300px 0px 100px 0px;
+}
+
+.sectionTwoTitle{
+    color:#2C2F24;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sectionTwoInformation{
+    color:#2C2F24;
+    font-size: 14px;
+}
+
+.sectionTwoPhoneNumber{
+    font-size: 16px;
+    color:#AD343E;
+    font-weight: 600;
+}
+
+.sectionTwoSchedule{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTwoLocation{
+    width:160px;
+}
+
+@media screen and (max-width: 1024px) {
+    .absoluteSection{
+        width:60%;
+        left:17%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .absoluteSection{
+        top:20%;
+        left:6%;
+        width:80%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .absoluteSection{
+        top:16%;
+        left:35px;
+        width:300px;
+    }
+    .sectionInnerContent{
+        gap:20px;
+        flex-direction: column;
+    }
+    .sectionAbsoluteHalfInputContainer{
+        width:100%;
+    }
+    .sectionTwoContainer{
+        gap:30px;
+        padding-top: 350px;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

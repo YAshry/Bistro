@@ -1,0 +1,666 @@
+@import url("@fontsource/playfair-display");
+
+/* Section One */
+.sectionOneContainer{
+    gap:20px;
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    padding-bottom: 150px;
+    justify-content: center;
+}
+
+.sectionOneRightContainer{
+    width: 50%;
+    display: flex;
+    position: relative;
+    margin-bottom: auto;
+}
+
+.soRightImageContainer{
+    width:70%;
+    display: flex;
+    border-radius: 20px;
+
+    animation: sectionThreeImageAnim 1s;
+}
+
+@keyframes sectionThreeImageAnim {
+    from{
+        opacity:0;
+        transform: translateX(-500px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }   
+}
+
+.soRightImageContainer img{
+    width:100%;
+    border-radius: 20px;
+}
+
+.soRightOverlayContentContainer{
+    gap:40px;
+    right:21%;
+    bottom:-10%;
+    padding:40px;
+    z-index: 999;
+    display: flex;
+    max-width:250px;
+    color:#ffffff;
+    position: absolute;
+    border-radius: 10px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+
+    animation: sectionThreeOverLayAnim 1s;
+}
+
+@keyframes sectionThreeOverLayAnim {
+    from{
+        opacity:0;
+        transform: translateX(50px);
+        transform: translateY(100px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+        transform: translateY(0);
+    } 
+}
+
+.sectionOneOverlayTitle{
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight:bold;
+}
+
+.sectionOneOverlayContactInformationContainer{
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionOneOverlayContactInformationSubContainer{
+    gap:20px;
+    display: flex;
+}
+
+.contactIconContainer{
+    font-size: 13px;
+    color:#F9F9F7;
+}
+
+.sectionOneMail,
+.contactInformationContainer{
+    font-size: 13px;
+    color:#F9F9F7;
+    transition: 0.5s all;
+    text-decoration: none;
+}
+
+.sectionOneMail:hover{
+    color:#AD343E;
+}
+
+.sectionOneLeftContainer{
+    gap:20px;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.soLeftTitleContainer{
+    font-size: 40px;
+    color:#2C2F24;
+    font-weight: bold;
+    font-family: Playfair Display;
+
+    animation: fadeIn 1s;
+}
+
+.soLeftDescriptionOneContainer{
+    font-size: 13px;
+    font-weight:500;
+    color:#000000;
+    line-height: 1.5em;
+
+    animation: fadeIn 1s;
+}
+
+.soLeftDescriptionTwoContainer{
+    color:#414536;
+    font-size: 11px;
+    font-weight:regular;
+
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+        transform:rotate(50deg)
+    }
+    to{
+        opacity:1;
+        transform:rotate(0deg)
+    }
+}
+
+/* Section 2 */
+.sectionTwoContainer{
+    height:900;
+    display: flex;
+    position:"relative";
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.sectionTwoVideoBGImage{
+    width:100%;
+    cursor:auto;
+    /* height:600px; */
+}
+
+.sectionTwoVideoContentContainer{
+    cursor:auto; 
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionTwoVideoIconContainer{
+    padding:25px;
+    display: flex;
+    cursor:pointer;
+    font-size: 22px;
+    color:#AD343E;
+    border-radius: 50px;
+    align-items: center;
+    transition: 0.5s all;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.sectionTwoVideoIconContainer:hover{
+    transform: scale(1.1);
+}
+
+.sectionTwoVideoTextContainer{
+    width:60%;
+    margin-top:25px;
+    font-size: 40px;
+    color:#ffffff;
+    text-align: center;
+    font-family: Playfair Display;
+}
+
+.sectionTwoCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 100px 60px 250px;
+    justify-content: center;
+}
+
+.sectionTwoCardContainer{
+    gap:15px;
+    width:30%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.sectionTwoCardContent{
+    gap:15px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.sectionTwoCardTitle{
+    font-size: 16px;
+    color:#2C2F24;
+    font-weight: 600;
+}
+
+.sectionTwoCardDescription{
+    width:85%;
+    font-size: 13px;
+    color:#414536;
+    font-weight: 500;
+}
+
+/* Section 3 */
+.sectionThreeContainer{
+    gap:20px;
+    display: flex;
+    padding:80px 80px;
+    align-items: start;
+    justify-content: center;
+
+    animation: sectionThreeOpacity linear both;
+    animation-timeline: view(); /*on scroll load animation*/
+    animation-range: entry 50% cover 50%; /*start and end of animation position*/
+}
+
+@keyframes sectionThreeOpacity {
+    from{
+        opacity:0;
+        transform: translateY(150px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+.sectionThreeContentContainer{
+    gap:20px;
+    width:50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionThreeImageContainer{
+    width:30%;
+}
+.sectionThreeImageContainer img{
+    width:100%;
+    display: flex;
+}
+
+.sectionThreeTitle{
+    width:75%;
+    color:#2C2F24;
+    font-size: 50px;
+    font-family: Playfair Display;
+}
+
+.sectionThreeDescription{
+    width:76%;
+    font-size: 14.5px;
+    color:#414536;
+}
+
+.sectionThreeCards{
+    gap:20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.sectionThreeCardContainer{
+    gap:5px;
+    width: 30%;
+    display: flex;
+    padding:20px;
+    border-radius: 5px;
+    text-align: center;
+    flex-direction: column;
+    background-color:#ffffff;
+    box-shadow: 0px 0px 2px #ccc;
+}
+
+.sectionThreeCardCounterContainer{
+    font-size: 40px;
+    color:#2C2F24;
+    font-weight: 600;
+    font-family: Playfair Display;
+}
+
+.sectionThreeCardTitleContainer{
+    font-size: 14px;
+    color:#414536;
+}
+
+/* Section 4 */
+.sectionFourContainer{
+    gap:80px;
+    display:flex;
+    padding:100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.sectionFourTitle{
+    color:#2C2F24;
+    font-size: 50px;
+    text-align: center;
+    font-weight: medium;
+    font-family:Playfair Display;
+}
+
+.sectionFourCardsContainer{
+    gap:10px;
+    padding:20px 0px;
+    display: flex;
+    width:fit-content;
+    height:fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionFourCard{
+    gap:20px;
+    width: 300px;
+    height:200px;
+    padding:50px;
+    display: flex;
+    align-items: start;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #F9F9F7;
+}
+
+.sectionFourCardTitle{
+    font-size: 18px;
+    color:#AD343E;
+    font-weight: 600;
+}
+
+.sectionFourCardDescription{
+    width:100%;
+    font-size: 15px;
+    font-weight:500;
+    color:#414536;
+    white-space: wrap;
+    word-break: break-word;
+}
+
+.sectionFourCardHorizontal{
+    width:100%;
+}
+
+.sectionFourCardHorizontal hr{
+    border: 1px solid #DBDFD0;
+}
+
+.sectionFourCardContactContainer{
+    gap:20px;
+    display: flex;
+    margin-top:auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionFourCardContactImage{
+    width:50px;
+    height:50px;
+    display: flex;
+    border-radius:50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionFourCardContactImage img{
+    width:100%;
+    height:100%;
+    display: flex;
+    border-radius:50%;
+}
+
+.sectionFourCardContactContent{
+    gap:5px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sectionFourCardContactName{
+    font-size: 15px;
+    color:#2C2F24;
+    font-weight: 600;
+}
+
+.sectionFourCardContactAddress{
+    font-size: 13px;
+    color:#414536;
+    font-weight: 500;
+}
+
+.sectionFourOverflowContainer{
+    width:90%;
+    height: 400px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+    .soRightOverlayContentContainer{
+        right:5%;
+        padding:30px;
+        bottom:-24%;
+    }
+    .sectionOneOverlayTitle{
+        font-size: 13px;
+    }
+    .sectionOneLeftContainer{
+        width:40%;
+    }
+    .sectionOneMail,
+    .contactInformationContainer{
+        font-size: 11px;
+    }
+    .soLeftTitleContainer{
+        font-size: 35px;
+    }
+    .sectionTwoContainer{
+        height:600px;
+    }
+    .sectionTwoCardsContainer{
+        padding: 60px 50px;
+    }
+    .sectionThreeTitle{
+        font-size: 35px;
+    }
+    .sectionThreeDescription{
+        font-size: 12px;
+    }
+
+    .sectionThreeCardCounterContainer{
+        font-size: 25px;
+    }
+    
+    .sectionThreeCardTitleContainer{
+        font-size: 10px;
+    }
+    .sectionThreeImageContainer{
+        width:40%;
+    }
+    .sectionFourContainer{
+        padding:50px;
+    }
+    .sectionFourTitle{
+        font-size: 40px;
+    }
+    .sectionFourCardTitle{
+        font-size: 16px;
+    }
+    .sectionFourCardDescription{
+        font-size: 12px;
+    }
+    .sectionFourCardContactName{
+        font-size: 13px;
+    }
+    .sectionFourCardContactAddress{
+        font-size: 12px;
+    }
+    .sectionFourCardContactImage{
+        height:60px;
+        width:60px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .sectionOneContainer{
+        gap:100px;
+        padding:60px;
+        flex-direction: column;
+    }
+    .soRightOverlayContentContainer{
+        left:25%;
+        bottom:-10%;
+        padding:40px;
+    }
+    .sectionOneRightContainer{
+        width:100%;
+        justify-content: center;
+    }
+    .sectionOneLeftContainer{
+        width:100%;
+        text-align: center;
+        align-items: center;
+    }
+    .soLeftTitleContainer,
+    .soLeftDescriptionOneContainer,
+    .soLeftDescriptionTwoContainer{
+        padding:0px 100px;
+    }
+    .sectionTwoCardsContainer{
+        padding: 20px 40px;
+    }
+    .sectionTwoCardContainer{
+        width:50%;
+        margin: 30px 0px;
+    }
+    .sectionThreeContainer{
+        gap:0;
+        padding: 0px;
+        padding-bottom: 40px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .sectionThreeContentContainer{
+        gap:30px;
+    }
+    .sectionThreeImageContainer{
+        width:50%;
+        transform: rotate(-90deg);
+    }
+    .sectionThreeCards{
+        justify-content: center;
+    }
+    .sectionThreeTitle{
+        width: 100%;
+        text-align: center;
+    }
+    .sectionThreeDescription{
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+    .sectionThreeCardContainer{
+        width:30%;
+        padding:50px;
+
+    }
+    .sectionThreeContentContainer{
+        width:80%;
+        align-items: center;
+    }
+    .sectionThreeImageContainer{
+        width:60%;
+    }
+    .sectionFourCardsContainer{
+        flex-wrap: wrap;
+    }
+    .sectionFourCard{
+        width:30%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sectionOneContainer{
+        padding:40px 20px;
+    }
+    .sectionOneRightContainer{
+        align-items: center;
+        flex-direction: column;
+    }
+    .soRightOverlayContentContainer{
+        left:12%;
+        bottom:-30%;
+        padding:20px;
+    }
+    .soLeftTitleContainer,
+    .soLeftDescriptionOneContainer,
+    .soLeftDescriptionTwoContainer{
+        padding:0px 30px;
+    }
+    .sectionTwoCardsContainer{
+        flex-direction: column;
+    }
+    .sectionTwoCardContainer{
+        width:100%;
+    }
+    .sectionTwoVideoIconContainer{
+        padding:8px;
+        font-size: 15px;
+    }
+    
+    .sectionTwoVideoTextContainer{
+        width:60%;
+        margin-top:25px;
+        font-size: 17px;
+    }
+    .sectionTwoCardIcon img{
+        width:80%;
+    }
+    .sectionTwoCardTitle{
+        font-size: 15px;
+    }
+    .sectionTwoCardsContainer{
+        gap:0;
+        margin:0;
+        padding:20px 40px;
+        align-items: start;
+    }
+    .sectionFourCard{
+        width:100%;
+    }
+    .sectionFourTitle{
+        font-size: 35px;
+    }
+    .sectionFourCard{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .soRightOverlayContentContainer{
+        left:7%;
+        bottom:-30%;
+    }
+    .soRightImageContainer{
+        width:90%;
+    }
+    .soLeftTitleContainer{
+        font-size: 30px;   
+    }
+    .soLeftDescriptionOneContainer{
+        font-size: 12px;
+    }
+    .sectionFourCardContactContainer{
+        flex-direction: column;
+    }
+}

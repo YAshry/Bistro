@@ -1,0 +1,109 @@
+/* Modal Styles */
+.modalCloseButton{
+    padding:10px;
+    width:fit-content;
+}
+
+.modalHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sectionInnerContent{
+    gap:20px;
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalTitle{
+    font-size: 30px;
+    color:#414536;
+    font-weight: 600;
+    font-family: Playfair Display;
+}
+
+.halfInputContainer{
+    width:calc(100%/2.05)
+}
+
+.threeInputContainer{
+    width:calc(100%/3.14)
+}
+
+.modalAddButtonContainer{
+    width:100%;
+    padding-bottom:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardHRContainer{
+    width: 100%;
+    border: 1px solid #DBDFD0;
+}
+
+.modalItemImageContainer{
+    width:100%;
+    display: flex;
+    padding: 30px 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalItemImageInnerContainer{
+    width:150px;
+    height:150px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #414536;
+}
+
+.modalItemImageInnerContainer img{
+    width:100%;
+    height:100%;
+    display:flex;
+    position: relative;
+    border-radius: 50%;
+}
+
+.modalItemImageButton{
+    bottom:10px;
+    padding:15px;
+    border-radius: 50%;
+    position:absolute;
+}
+
+@media screen and (max-width: 1440px) {
+    .threeInputContainer{
+        width:48.3%;
+    }
+    .halfInputContainer{
+        width:48.3%
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .threeInputContainer{
+        width:48.3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .halfInputContainer{
+        width:100%;
+    }
+    .threeInputContainer{
+        width:100%;
+    }
+    .modalTitle{
+        font-size: 18px;
+    }
+}
