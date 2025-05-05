@@ -98,13 +98,13 @@ const Book = () =>{
     ]
 
     const handleBooking = () => {
-        if(userFoundLocal.userName == undefined){
+        if(userFoundLocal?.userName == undefined){
             setError(t('pleaseloginfirst'))
         }
         else{
             setError("")
 
-            if(username == userFoundLocal.userName){
+            if(username == userFoundLocal?.userName){
                 if( date != "" && time != "" && name != "" && phone != "" && username != "" && totalPerson != ""){
                     axios
                     .post("http://localhost:4000/api/v1/bookings",bookInfo)
