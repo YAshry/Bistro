@@ -313,7 +313,7 @@ const About = () =>{
 
                     <div className={`${aboutStyles.sectionFourCardsContainer}`}>
 
-                        {allComments.map((comment,index)=>{
+                        {allComments?.map((comment,index)=>{
                                 return(
                                     <Fragment key={index}>
                                         <div className={`${aboutStyles.sectionFourCard}`}>
